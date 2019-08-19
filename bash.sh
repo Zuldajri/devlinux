@@ -1,8 +1,10 @@
 echo "ADMIN_USER=$ADMIN_USER"
 
+sudo apt update -y && sudo apt upgrade -y
+
 # Install Desktop
 echo $(date) " linux-install-desktop - Starting Script"
-sudo apt-get install ubuntu-desktop -y
+sudo apt install ubuntu-gnome-desktop -y
 
 # Install xrdp
 echo $(date) " linux-install-xrdp - Starting Script"
