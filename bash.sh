@@ -20,3 +20,4 @@ sed -i '8d' /etc/xrdp/startwm.sh
 echo "startxfce4" >> /etc/xrdp/startwm.sh
 sudo service xrdp restart
 
+sudo apt-get install firefox -y
