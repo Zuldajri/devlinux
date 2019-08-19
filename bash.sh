@@ -40,11 +40,5 @@ sudo apt-get update -y
 
 sudo apt-get install google-chrome-stable -y
 
-# Install Mailspring
-sudo apt update -y
-sudo apt install gdebi-core wget -y
 
-wget -O ~/mailspring.deb "https://updates.getmailspring.com/download?platform=linuxDeb"
-
-sudo gdebi ~/mailspring.deb -y
 
