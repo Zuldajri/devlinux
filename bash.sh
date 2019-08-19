@@ -11,14 +11,14 @@ sudo systemctl enable xrdp
 
 
 # Install xfce4
-#echo $(date) " linux-install-xfce4 - Starting Script"
-#sudo apt-get install xfce4 -y
+echo $(date) " linux-install-xfce4 - Starting Script"
+sudo apt-get install xfce4 -y
 
-#echo xfce4-session > /home/$ADMIN_USER/.xsession 
-#sed -i '8d' /etc/xrdp/startwm.sh
+echo xfce4-session > /home/$ADMIN_USER/.xsession 
+sed -i '8d' /etc/xrdp/startwm.sh
 
-#echo "startxfce4" >> /etc/xrdp/startwm.sh
-#sudo service xrdp restart
+echo "startxfce4" >> /etc/xrdp/startwm.sh
+sudo service xrdp restart
 
 # Install firefox
 sudo apt-get install firefox -y
