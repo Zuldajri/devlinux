@@ -20,6 +20,16 @@ sed -i '8d' /etc/xrdp/startwm.sh
 echo "startxfce4" >> /etc/xrdp/startwm.sh
 sudo service xrdp restart
 
+# Install Docker-CE
+sudo apt-get update -y
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+
+
 # Install firefox
 sudo apt-get install firefox -y
 
