@@ -80,3 +80,12 @@ sudo apt-get install azure-cli
 
 # Install AWS CLI
 sudo apt-get install awscli -y
+
+# install Ansible
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install ansible -y
+
+# Install Terraform
+sudo apt-get install wget unzip -y
+wget https://releases.hashicorp.com/terraform/0.12.7/terraform_0.12.7_linux_amd64.zip
+sudo unzip /var/lib/waagent/custom-script/download/0/terraform_0.12.7_linux_amd64.zip -d /usr/local/bin/
