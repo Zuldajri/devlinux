@@ -31,6 +31,9 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
+# Install Docker-Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
 # Install firefox
 sudo apt-get install firefox -y
@@ -39,10 +42,16 @@ sudo apt-get install firefox -y
 sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo apt-get update -y
-
 sudo apt-get install google-chrome-stable -y
 
+# Install VLC
 sudo snap install vlc
+
+# Install Teams
 sudo snap install teams-for-linux
+
+# Install Slack
 sudo snap install slack --classic
+
+# Install Visual Studio Code
 sudo snap install code --classic
