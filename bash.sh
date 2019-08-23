@@ -35,6 +35,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+# Install Kubectl
+sudo snap install kubectl --classic
+
 # Install firefox
 sudo apt-get install firefox -y
 
@@ -55,3 +58,14 @@ sudo snap install slack --classic
 
 # Install Visual Studio Code
 sudo snap install code --classic
+
+# Install Virtual box
+sudo add-apt-repository multiverse && sudo apt-get update
+sudo apt install virtualbox -y
+
+# Mention in Step by Step guide to install ext pack
+#sudo apt install virtualbox-ext-pack
+
+# Install Mini Kube
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.3.1.deb  && sudo dpkg -i minikube_1.3.1.deb
